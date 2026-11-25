@@ -1,14 +1,38 @@
 {
   "name": "orange-hrm",
   "version": "1.0.0",
-  "description": "",
+  "description": "OrangeHRM End-to-End Test Automation Framework using Playwright JavaScript and POM",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:chromium": "npx playwright test --project=chromium",
+    "report": "npx playwright show-report",
+    "allure:generate": "npx allure generate allure-results --clean -o allure-report",
+    "allure:open": "npx allure open allure-report",
+    "allure:serve": "npx allure serve allure-results"
+  },
+  "keywords": [
+    "orangehrm",
+    "playwright",
+    "javascript",
+    "automation",
+    "pom"
+  ],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.65.1",
-    "@types/node": "^26.6.6"
+    "@faker-js/faker": "^10.6.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6",
+    "allure-commandline": "^2.46.1"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.14.0",
+    "dotenv": "^18.0.9",
+    "mysql2": "^3.24.6"
   }
 }
